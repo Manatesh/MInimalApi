@@ -15,7 +15,7 @@ namespace MinimalApi
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("dbcs")));
-
+             
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
